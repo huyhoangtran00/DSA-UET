@@ -1,7 +1,7 @@
 import java.util.*;
 
 
-public class Main {
+public class HeapAndPriorityQueue {
    public static List<Character> list = new ArrayList<>();
 
    public static boolean less (int a, int b) {
@@ -45,25 +45,35 @@ public class Main {
     //heapsort max-heap
 
     public static void heapSort() {
-       for(i)
+       for(int k = list.size()/2 ; k >=1 ; k--) {
+           sink(k);
+       }
+       int n = list.size();
+       while (n > 1) {
+           Collections.swap(list,1,n-1);
+           sink(1);
+           n--;
+       }
     }
 
     public static void main(String[] args) {
        list.add('S');
-       list.add('T');
-       list.add('H');
-       list.add('R');
-       list.add('P');
        list.add('S');
        list.add('O');
+       list.add('R');
+       list.add('T');
+       list.add('E');
+       list.add('X');
        list.add('A');
+        list.add('M');
+        list.add('P');
+        list.add('L');
         list.add('E');
-        list.add('I');
-        list.add('N');
-        list.add('G');
         for(int i = 1 ; i < list.size() ; i++) {
             sink(i);
         }
+
+        heapSort();
 
        for(int i = 1 ; i < list.size() ; i++) {
            System.out.println(list.get(i));
@@ -72,3 +82,4 @@ public class Main {
 
     }
 }
+// event-driven simulation - must learn
