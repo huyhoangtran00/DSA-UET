@@ -42,9 +42,9 @@ class QUICK_FIND {
 class QUICK_UNION {
     // Implementation
     /*
-    algorithm initialize union find
-    quick-find N N 1
-    quick-union N N+ N
+    algorithm   | initialize    | union   |    find
+    quick-find  |N           |N        |   1
+    quick-union |N         | N+      | N
     => quick-union is worst case
      */
     private int [] id ;
@@ -75,6 +75,16 @@ class QUICK_UNION {
         int j = root(q);
         id[i] = j;
     }
+
+    /*
+        Quick-find defect.
+        ・Union too expensive (N array accesses).
+        ・Trees are flat, but too expensive to keep them flat.
+
+        Quick-union defect.
+        ・Trees can get tall.
+        ・Find too expensive (could be N array accesses).
+     */
 
 }
 
