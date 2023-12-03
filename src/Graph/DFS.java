@@ -2,12 +2,13 @@ package Graph;
 
 import java.util.*;
 
-public class Graph {
+public class DFS {
 
     private static Stack<Integer>[] adj ;
+
     private static boolean[] visited;
 
-    Graph() {
+    DFS() {
 
         adj = new Stack[1000];
         visited = new boolean[1000];
@@ -29,6 +30,10 @@ public class Graph {
 
     }
 
+    public static void bfs(int u ) {
+
+    }
+
 
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
@@ -36,7 +41,7 @@ public class Graph {
         n = sc.nextInt();
         m = sc.nextInt();
 
-        new Graph();
+        new DFS();
 
         for(int i = 0 ; i < m ; i++) {
             int x = sc.nextInt();
