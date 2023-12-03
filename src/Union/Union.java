@@ -1,3 +1,5 @@
+package Union;
+
 class QUICK_FIND {
     private int [] id ;
     /*
